@@ -1,0 +1,37 @@
+{
+    "privateKey": {
+        "Admin":{ 
+            "value":"./accounts/0x144d5ca47de35194b019b6f11a56028b964585c9.pem",
+            "type": "pem"
+        },
+        "华为":{ 
+            "type": "pem",
+            "value":"./accounts/0x43ed12399576540c80b3be1525e15897318ee044.pem"
+        },
+        "高通":{ 
+            "value":"./accounts/0x62248e937c9af6a17f777d0aa8d1a9f9813ff727.pem",
+            "type": "pem"
+        },
+        "微众":{ 
+            "type": "pem",
+            "value": "./accounts/0xa4fb3713c647fb79fa3a5ed057bcac99f1c635b9.pem"
+        },
+        "建设":{
+            "type": "pem",
+            "value":"./accounts/0xe42b97f9b42f3fa586b98065d1d4342ec18bfd3c.pem"
+        }
+    },
+    "nodes": [
+        {
+            "ip": "47.98.133.64",
+            "port": "20200"
+        }
+    ],
+    "authentication": {
+        "key": "./key/node.key",
+        "cert": "./cert/node.crt",
+        "ca": "./ca/ca.crt"
+    },
+    "groupID": 1,
+    "timeout": 10000
+}

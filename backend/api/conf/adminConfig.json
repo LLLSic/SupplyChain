@@ -1,0 +1,21 @@
+{
+    "privateKey": {
+        "Admin":{ 
+            "value":"./accounts/0x144d5ca47de35194b019b6f11a56028b964585c9.pem",
+            "type": "pem"
+        }
+    },
+    "nodes": [
+        {
+            "ip": "47.98.133.64",
+            "port": "20200"
+        }
+    ],
+    "authentication": {
+        "key": "./key/node.key",
+        "cert": "./cert/node.crt",
+        "ca": "./ca/ca.crt"
+    },
+    "groupID": 1,
+    "timeout": 10000
+}
