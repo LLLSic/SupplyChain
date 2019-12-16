@@ -1,17 +1,49 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "nodejs ./bin/www"
-  },
-  "dependencies": {
-    "express": "~4.0.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "body-parser": "~1.0.0",
-    "debug": "~0.7.4",
-    "jade": "~1.3.0"
-  }
+    "name": "nodejs-sdk",
+    "version": "0.9.0",
+    "description": "Node.js sdk for FISCO BCOS",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vita-dounai/nodejs-sdk.git"
+    },
+    "author": "catli",
+    "engineStrict": true,
+    "engines": {
+        "node": ">=8.10.0",
+        "npm": ">=5.6.0"
+    },
+    "scripts": {
+        "repoclean": "lerna clean && npm run clean-solc-0.4 && npm run clean-solc-0.5",
+        "bootstrap": "lerna bootstrap && npm run install-solc-0.4 && npm run install-solc-0.5",
+        "install-solc-0.4": "cd ./packages/api/common/solc-0.4/ && npm install",
+        "install-solc-0.5": "cd ./packages/api/common/solc-0.5/ && npm install",
+        "clean-solc-0.4": "rm -rf ./packages/api/common/solc-0.4/node_modules",
+        "clean-solc-0.5": "rm -rf ./packages/api/common/solc-0.5/node_modules"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "lerna": "^3.16.1"
+    },
+    "nyc": {
+        "exclude": [
+            "lib/**"
+        ],
+        "reporter": [
+            "text-summary",
+            "html"
+        ],
+        "all": true,
+        "check-coverage": false,
+        "statements": 5,
+        "branches": 8,
+        "functions": 7,
+        "lines": 5
+    },
+    "license": "Apache-2.0",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ]
 }
